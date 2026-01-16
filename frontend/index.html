@@ -19,29 +19,28 @@
   <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.js"></script>
 </head>
-<body class="bg-gray-100">
-  <div class="p-6">
-    <h1 class="text-2xl font-bold text-center">CodeVision</h1>
-    <div id="app" class="flex flex-col items-center space-y-6 mt-10">
-  <button 
-    onclick="goToCreate()"
-    class="px-6 py-3 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">
-    Create Room
-  </button>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen flex items-center justify-center">
 
-  <button 
-    onclick="goToJoin()"
-    class="px-6 py-3 bg-green-500 text-white rounded-xl shadow-md hover:bg-green-600 transition">
-    Join Room
-  </button>
-</div>
+  <div class="bg-white p-10 rounded-3xl shadow-2xl w-80 flex flex-col items-center space-y-8">
+    <h1 class="text-3xl font-extrabold text-gray-800 text-center">CodeVision</h1>
 
-<!-- Page-specific script -->
-<script src="./js/index.js"></script>
+    <div class="flex flex-col space-y-4 w-full">
+      <button 
+        onclick="goToCreate()"
+        class="w-full py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:bg-indigo-700 transition duration-300 font-semibold">
+        Create Room
+      </button>
 
+      <button 
+        onclick="goToJoin()"
+        class="w-full py-3 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 transition duration-300 font-semibold">
+        Join Room
+      </button>
+    </div>
   </div>
 
+  <!-- Page-specific script -->
+  <script src="./js/index.js"></script>
   <script src="./js/common.js"></script>
-  <!-- Page-specific script will be added below -->
 </body>
 </html>

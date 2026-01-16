@@ -19,42 +19,32 @@
   <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/lib/codemirror.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.15/mode/javascript/javascript.js"></script>
 </head>
-<body class="bg-gray-100">
-  <div class="p-6">
-    <h1 class="text-2xl font-bold text-center">CodeVision</h1>
-    <div id="app" class="flex flex-col items-center space-y-6 mt-10">
-  <h2 class="text-xl font-semibold">Create a Room</h2>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen flex items-center justify-center">
 
-  <!-- Room Type Buttons -->
-  <button 
-    onclick="createExamRoom()"
-    class="px-6 py-3 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600 transition">
-    Create Exam Room
-  </button>
+  <div class="bg-white p-10 rounded-3xl shadow-2xl w-96 flex flex-col items-center space-y-6">
+    <h1 class="text-3xl font-extrabold text-gray-800 text-center">CodeVision</h1>
+    <h2 class="text-xl font-semibold text-gray-700 text-center">Generate a Room</h2>
 
-  <button 
-    onclick="createCollaborativeRoom()"
-    class="px-6 py-3 bg-purple-500 text-white rounded-xl shadow-md hover:bg-purple-600 transition">
-    Create Collaborative Room (Coming Soon)
-  </button>
-
-  <!-- Display Result -->
-  <div id="roomInfo" class="hidden mt-6 p-4 bg-white rounded-xl shadow-md w-80">
-    <h3 class="text-lg font-semibold text-center mb-2">Room Created!</h3>
-    <p><strong>Room ID:</strong> <span id="roomId"></span></p>
+    <!-- Generate Room Button -->
     <button 
-      onclick="goToHostPage()"
-      class="mt-4 w-full px-4 py-2 bg-green-500 text-white rounded-xl hover:bg-green-600 transition">
-      Go to Exam Host Page
+      onclick="createExamRoom()"
+      class="w-full py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:bg-indigo-700 transition duration-300 font-semibold">
+      Generate Room ID
     </button>
+
+    <!-- Display Result -->
+    <div id="roomInfo" class="hidden mt-6 p-4 bg-gray-50 rounded-xl shadow-md w-full text-center">
+      <h3 class="text-lg font-semibold mb-2 text-gray-800">Room Created!</h3>
+      <p class="text-gray-700"><strong>Room ID:</strong> <span id="roomId" class="font-mono"></span></p>
+      <button 
+        onclick="goToHostPage()"
+        class="mt-4 w-full py-2 bg-green-500 text-white rounded-xl hover:bg-green-600 transition font-semibold">
+        Go to Exam Host Page
+      </button>
+    </div>
   </div>
-</div>
 
-<script src="./js/create.js"></script>
-
-  </div>
-
+  <script src="./js/create.js"></script>
   <script src="./js/common.js"></script>
-  <!-- Page-specific script will be added below -->
 </body>
 </html>
